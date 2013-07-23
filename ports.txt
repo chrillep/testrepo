@@ -1,0 +1,38 @@
+Verbose port commands: 		-v
+Select Xcode: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+
+List installed ports:	
+		port list installed
+		
+List inactive ports:
+		port list inactive 
+		
+Uninstall inactive ports:
+		port uninstall inactive
+		
+Update mac ports:
+		sudo port -v selfupdate
+		
+Search program:
+		port search vim
+
+Different variants:
+		port variants vim
+
+Install port program:
+		sudo port install vim
+		
+Install ports with vim and other featuresets:
+		sudo port install vim +python +huge
+		
+Install ports with verbose mode since it takes a bit of time so you know whats happening:
+		sudo port -v install vim +python +huge
+		
+To list all outdated ports:
+		port outdated
+
+To upgrade a particular port:
+		sudo port upgrade <portname>
+
+To upgrade all outdated ports:
+		sudo port upgrade outdated

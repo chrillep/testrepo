@@ -1,0 +1,44 @@
+Windows 7 sysprep preinstall list
+	Wireshark
+	Google Chrome
+		Web developer
+	Firefox
+		Web developer
+		Firesheep
+	Java 7
+	Cisco-ASDM
+	Cisco Anyconnect
+	Notepad++
+	vmware vSphere Client 5.0
+	vmware vSphere Client 5.1
+	Truecrypt
+	Network share to vm_share on VMWare fusion host machine
+	Microsoft Office Professional Plus 2013
+	Nmap
+	putty
+	puttygen
+	winscp
+	
+
+1. after installation run c:\windows\system32\sysprep\sysprep.exe
+2. select oob and select the checkbox and shut down machine afterwards
+3. Make two duplicates of the machine and choose "i copied it" when you start the machines. 
+	check if both internet connection work.
+4. copy the core machine to a safe location for safekeeping (if the one you use breaks you will need this)
+5. Open Vmware machine package and copy all the VMDK files to a new location ie. 
+	/Users/patrik/Documents/Virtual Machines.localized/Core  Machines/
+6. Open "Virtual disk.vmdk" with a texteditor and add the path before every vmdk machine.
+	RW 4192256 SPARSE "/Users/patrik/Documents/Virtual Machines.localized/Core  Machines/Windows 7 Core vmdk/Virtual Disk-s001.vmdk"
+7. remove the UUID line from the file and save it.
+8. Make the vmdk files read only. 
+	chmod a-w /Users/patrik/Documents/Virtual\ Machines.localized/Core\ Machines/Windows\ 7\ Core\ vmdk/*.vmdk
+9. The disks are ready and next step is to create a clone.
+
+-- create a clone--
+1. create a new Custom virtual machine
+2. Choose the right OS
+3. Customise default settings
+4. Save the machine to prefered location
+5. remove the harddrive by - button or delete in virtual machine package
+6. copy the core Virtual disk.vmdk to the new machine
+7. In the edit pane choose to add existing disk to machine and select the copied vmdk file.
