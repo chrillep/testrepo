@@ -15,9 +15,26 @@ To be able to start versioncontrolling files you need to start tracking them.
 		git add <file>
 	add directory
 		git add .
-
-To see changes that has been commited
+	add parts of the modification to be staged(and further commited)
+	you will then see all changes and be asked what to stage and what not to.
+		git add -p
+See what commits are made
 	git log
 	
 To se what status the repository is in.
 	git status
+		Nothing to commit:
+		# On branch master
+		nothing to commit (working directory clean)
+	
+To commit files to the repo
+	git commit -m "initial commit"
+	
+show what the last commit is
+	git show
+
+Show what has been changed
+	git diff
+	
+show changes in specified file
+	git diff <file>
