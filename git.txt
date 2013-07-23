@@ -8,55 +8,35 @@ Download a git repo to your local machine. It will download all changes and logs
 it appears in the original repo.
 	git clone https://github.com/puppetlabs/puppet.git
 	
-To create a new git repository in a empty directory
-	git init
+
+git init				#Create a git repository
+
+git add <file>			#Track specific file
+git add .				#Track all files in directory
+git add -p				#select what staged changes to commit
+
+git log					#See what commits are made
+git log --stat 			#shows what files are changed in the commit
+git log --graph --all 	#show commits in all branhces as graph
+
+git status				#Display repository status
+
+
+git commit -m "initial commit" 		#Commit files to repo
+git commit -am "add more files"		#Commit files and add untracked files
 	
-To be able to start versioncontrolling files you need to start tracking them.
-	Add files 
-		git add <file>
-	add directory
-		git add .
-	add parts of the modification to be staged(and further commited)
-	you will then see all changes and be asked what to stage and what not to.
-		git add -p
-		
-See what commits are made
-	git log
-	git log --stat #shows what files are changed in the commit
-		
-To se what status the repository is in.
-	git status
-		Nothing to commit:
-		# On branch master
-		nothing to commit (working directory clean)
-	
-To commit files to the repo
-	git commit -m "initial commit"
-	git commit -am "add more files"
-	
-show what the last commit is
-	git show
+git show				#Display last commit
 
-Show what has been changed
-	git diff
-	
-show changes in specified file
-	git diff <file>
+git diff				#Display changes
+git diff <file>			#Display changes in file
+git diff --staged		#Display staged data that is ready to be commited
 
-show staged info that is ready to be commited
-	git diff --staged
+git branch				#List git branches
+git branch <branchname>	#Create git branch from current branch
+git branhc -v			#List last commit on all branches
 
-list git branches
-	git branch
-	
-create a git branch (to create a branch from an exsiting branch go to the existing branch first)
-	git branch <branchname>
+git checkout <branchname>	#change branch (Changes files in working folder)
+git checkout -b <newbranch>	#Create and change branch at the same time
 
-switch git branch (Changes the files in the workingdirectory in place) 
-	git checkout <branchname>
-
-Create a branch and checkout that branch at the same time
-	git checkout -b <newbranch>
-
-show the git commits visualy
-	gitk
+gitk 					#Visual display of git branch
+gitk --all				#Visual display of all git branches
