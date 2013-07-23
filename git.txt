@@ -1,7 +1,8 @@
 configure your git global name and email.
-	git configure --global user.name "Patrik Martin"
-	git configure --global user.email patrik.martin@mideye.com
-	git configure --global color.ui true
+	git config --global user.name "Patrik Martin"
+	git config --global user.email patrik.martin@mideye.com
+	git config --global color.ui true
+	git config --global core.editor vim
 	
 Download a git repo to your local machine. It will download all changes and logs as 
 it appears in the original repo.
@@ -18,9 +19,11 @@ To be able to start versioncontrolling files you need to start tracking them.
 	add parts of the modification to be staged(and further commited)
 	you will then see all changes and be asked what to stage and what not to.
 		git add -p
+		
 See what commits are made
 	git log
-	
+	git log --stat #shows what files are changed in the commit
+		
 To se what status the repository is in.
 	git status
 		Nothing to commit:
@@ -29,6 +32,7 @@ To se what status the repository is in.
 	
 To commit files to the repo
 	git commit -m "initial commit"
+	git commit -am "add more files"
 	
 show what the last commit is
 	git show
@@ -38,3 +42,21 @@ Show what has been changed
 	
 show changes in specified file
 	git diff <file>
+
+show staged info that is ready to be commited
+	git diff --staged
+
+list git branches
+	git branch
+	
+create a git branch (to create a branch from an exsiting branch go to the existing branch first)
+	git branch <branchname>
+
+switch git branch (Changes the files in the workingdirectory in place) 
+	git checkout <branchname>
+
+Create a branch and checkout that branch at the same time
+	git checkout -b <newbranch>
+
+show the git commits visualy
+	gitk
