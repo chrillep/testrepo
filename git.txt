@@ -14,7 +14,7 @@ it appears in the original repo.
 
 git init				#Create a git repository
 
-git add <file>			#Track specific file
+git add <file>			#Track specific file || mark file as resolved after conflict
 git add .				#Track all files in directory
 git add -p				#select what staged changes to commit
 
