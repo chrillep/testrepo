@@ -21,8 +21,12 @@ git add -p				#select what staged changes to commit
 git log					#See what commits are made
 git log --stat 			#shows what files are changed in the commit
 git log --graph --all 	#show commits in all branhces as graph
-
+git log <branch> --not <otherbranch>	#display all commits in <branch> that is not merged in to <otherbranch>
+git log --stat <branch> --not <otherbranch>	#display status of what is not committed to <otherbranch>
 git status				#Display repository status
+
+git blame <filename>	#Display file content and see who and when lines were edited
+git blame -C <filename> #as above but who actually wrote the line in the beginning
 
 git remote				#Display remote servers
 
@@ -64,3 +68,16 @@ git push origin master 	#Push your master branch to origin server
 User #2
 git clone git@github.cscottchacon.com:schacon/test.git
 git push origin master	#Pushes the changes to origin even if origin is not configured
+git fetch origin		#Fetches the changes from origin to a new origin/master branch
+git checkout -b <name> origin/master	#New branch from origin/master
+
+git pull	#Download the master repo on remote server and merge it with your current branch
+
+bisect lets you see what code is faulty
+------
+git bisect start 	#starts bisect engine
+git bisect bad		#current commit is bad
+bit bisect good <sha>	#select a commit where evrything worked
+git bisect good 	#set the current commit to good and moves on to next
+git bisict bad		#set the curront commit to bad and moves on to next
+git bisect reset	#goes back to where you were before
