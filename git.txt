@@ -18,6 +18,8 @@ git add <file>			#Track specific file
 git add .				#Track all files in directory
 git add -p				#select what staged changes to commit
 
+git config alias.lol 'log --pretty=oneline --abbrev-commit --graph --decorate'
+
 git log					#See what commits are made
 git log --stat 			#shows what files are changed in the commit
 git log --graph --all 	#show commits in all branhces as graph
