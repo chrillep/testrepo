@@ -24,6 +24,9 @@ git log --graph --all 	#show commits in all branhces as graph
 
 git status				#Display repository status
 
+git remote				#Display remote servers
+
+
 
 git commit -m "initial commit" 		#Commit files to repo
 git commit -am "add more files"		#Commit files and add untracked files
@@ -35,8 +38,10 @@ git diff <file>			#Display changes in file
 git diff --staged		#Display staged data that is ready to be commited
 
 git branch				#List git branches
-git branch <branchname>	#Create git branch from current branch
+git branch <name>		#Create git branch from current branch
 git branhc -v			#List last commit on all branches
+git branch -d <name>	#Delete branch
+git branch <name> <nr>	#Create a new branch from old commit
 
 git checkout <branchname>	#change branch (Changes files in working folder)
 git checkout -b <newbranch>	#Create and change branch at the same time
@@ -45,3 +50,17 @@ gitk 					#Visual display of git branch
 gitk --all				#Visual display of all git branches
 
 git merge <branch>		#Merge current branch with other branch
+
+
+REMOTE SERVER
+-------------
+User #1
+git remote add [options] <name> <url>
+git remote add origin git@github.cscottchacon.com:schacon/test.git
+git push origin master 	#Push your master branch to origin server
+
+		#git@<serveraddress>:<user>/<repo>.git
+
+User #2
+git clone git@github.cscottchacon.com:schacon/test.git
+git push origin master	#Pushes the changes to origin even if origin is not configured
