@@ -1,3 +1,6 @@
+Notes:
+	- use different branches for different tasks/problems
+
 configure your git global name and email.
 	git config --global user.name "Patrik Martin"
 	git config --global user.email patrik.martin@mideye.com
@@ -40,3 +43,5 @@ git checkout -b <newbranch>	#Create and change branch at the same time
 
 gitk 					#Visual display of git branch
 gitk --all				#Visual display of all git branches
+
+git merge <branch>		#Merge current branch with other branch
